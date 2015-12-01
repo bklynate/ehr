@@ -8,12 +8,11 @@ angular.module('firstApp', [])
     // define variables and objects on this                                                            
     // this lets them be available to our views                                                        
     // define a list of items                                                                          
-                                                                                                       
-                                                                                                       
+                                                                                                      
   $scope.players = function(){                                                                         
                                       
         $http.get(url).success(function(err, response){ 
-         console.log(response);
+           $scope.response = response; 
        }); 
         
   };       
