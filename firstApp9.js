@@ -15,51 +15,48 @@ angular.module('firstApp', [])
     // define a list of items                                                                          
   $scope.response = [];                                                                                                      
   $scope.all = function(){                                                                         
-           console.log(here);                           
+                                     
         $http.get(allurl).success(function(err, response){ 
-           console.log(here);       
+           console.log(response);       
            $scope.response = response; 
        }); 
         
   };       
      
   $scope.qb = function(){                                                                         
-           console.log(here);                           
         $http.get(qburl).success(function(err, response){ 
-           console.log(here);       
+           console.log(response);       
            $scope.response = response; 
        }); 
         
   };    
   $scope.wr = function(){                                                                         
-           console.log(here);                           
+                                    
         $http.get(wrurl).success(function(err, response){ 
-           console.log(here);       
+           console.log(response);       
            $scope.response = response; 
   });
   }; 
   
   $scope.rb = function(){                                                                         
-           console.log(here);                           
         $http.get(rburl).success(function(err, response){ 
-           console.log(here);       
+           console.log(response);       
            $scope.response = response; 
        }); 
   }; 
            
 $scope.te = function(){                                                                         
-           console.log(here);                           
         $http.get(teurl).success(function(err, response){ 
-           console.log(here);       
+           console.log(response);       
            $scope.response = response; 
        }); 
         
   };            
            
 $scope.k = function(){                                                                         
-           console.log(here);                           
+                                    
         $http.get(kurl).success(function(err, response){ 
-           console.log(here);       
+           console.log(response);       
            $scope.response = response; 
        }); 
         
