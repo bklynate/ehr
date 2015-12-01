@@ -13,10 +13,10 @@ angular.module('firstApp', [])
     // define variables and objects on this                                                            
     // this lets them be available to our views                                                        
     // define a list of items                                                                          
-                                                                                                      
+  $scope.response = [];                                                                                                      
   $scope.all = function(){                                                                         
            console.log(here);                           
-        $http.get(url).success(function(err, response){ 
+        $http.get(allurl).success(function(err, response){ 
            console.log(here);       
            $scope.response = response; 
        }); 
