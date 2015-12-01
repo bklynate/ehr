@@ -10,8 +10,9 @@ angular.module('firstApp', [])
                                                                                                        
                                                                                                        
   $scope.players = function(){                                                                         
-       console.log("here");                                                                            
-       $http.get(url).success(function(response){ 
+                                                                               
+       $http.get(url).success(function(err, response){ 
+         if(err) return err;
          console.log(response);
          return response;  
        });                            
