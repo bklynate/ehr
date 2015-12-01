@@ -1,4 +1,5 @@
-var url = "http://localhost:8000/all";                                                                                                                                               
+           
+var url = "http://localhost:8000/all";
                                                                                                        
 angular.module('firstApp', [])                                                                         
                                                                                                        
@@ -10,12 +11,11 @@ angular.module('firstApp', [])
                                                                                                        
                                                                                                        
   $scope.players = function(){                                                                         
-                                                                               
-       $http.get(url).success(function(err, response){ 
-         if(err) return err;
+                                      
+        $http.get(url).success(function(err, response){ 
          console.log(response);
-         return response;  
-       });                            
-   }                                                                                                   
+       }); 
+        
+  };       
                                                                                                        
-}]);            
+}]); 
