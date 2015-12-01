@@ -6,7 +6,8 @@ var rburl = "http://localhost:8000/rb";
 var teurl = "http://localhost:8000/te";
 var kurl = "http://localhost:8000/k";
                                                                                                        
-angular.module('firstApp', [])                                                                         
+angular.module('firstApp', [])
+.constant('_', $window._)
                                                                                                        
 .controller('mainController', [ '$scope', '$http', function($scope, $http) {                           
     // bind this to vm (view-model)                                                                    
@@ -60,6 +61,13 @@ $scope.k = function(){
            $scope.response = err; 
        }); 
         
-  };            
+  };    
+  
+  $scope.filterAll = function(){
+           var temp = JSON.parse(JSON.stringify($scope.response));
+           temp = _.sortBy(temp, function(o) { return (-1)*o.stat6; })
+           temp = [temp[0],temp[1],temp[2],temp[-3],temp[-2],temp[-1] ];
+           $scope.response = temp;
+  }
                                                                                                        
 }]); 
