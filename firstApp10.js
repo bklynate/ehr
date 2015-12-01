@@ -5,7 +5,7 @@ var wrurl = "http://localhost:8000/wr";
 var rburl = "http://localhost:8000/rb";
 var teurl = "http://localhost:8000/te";
 var kurl = "http://localhost:8000/k";
-var here = "here"                                                                                                       
+                                                                                                       
 angular.module('firstApp', [])                                                                         
                                                                                                        
 .controller('mainController', [ '$scope', '$http', function($scope, $http) {                           
@@ -16,39 +16,39 @@ angular.module('firstApp', [])
   $scope.response = [];                                                                                                      
   $scope.all = function(){                                                                         
                                      
-        $http.get(allurl).success(function(err, response){ 
-           console.log(response);       
-           $scope.response = response; 
+        $http.get(allurl).success(function(data, status){ 
+           console.log(status, data);       
+           $scope.response = data; 
        }); 
         
   };       
      
   $scope.qb = function(){                                                                         
-        $http.get(qburl).success(function(err, response){ 
-           console.log(response);       
-           $scope.response = response; 
+        $http.get(qburl).success(function(data, status){ 
+           console.log(status);       
+           $scope.response = data; 
        }); 
         
   };    
   $scope.wr = function(){                                                                         
                                     
-        $http.get(wrurl).success(function(err, response){ 
-           console.log(response);       
-           $scope.response = response; 
+        $http.get(wrurl).success(function(data, status){ 
+           console.log(status);       
+           $scope.response = data; 
   });
   }; 
   
   $scope.rb = function(){                                                                         
-        $http.get(rburl).success(function(err, response){ 
+        $http.get(rburl).success(function(data, response){ 
            console.log(response);       
-           $scope.response = response; 
+           $scope.response = data; 
        }); 
   }; 
            
 $scope.te = function(){                                                                         
         $http.get(teurl).success(function(err, response){ 
            console.log(response);       
-           $scope.response = response; 
+           $scope.response = err; 
        }); 
         
   };            
@@ -57,7 +57,7 @@ $scope.k = function(){
                                     
         $http.get(kurl).success(function(err, response){ 
            console.log(response);       
-           $scope.response = response; 
+           $scope.response = err; 
        }); 
         
   };            
