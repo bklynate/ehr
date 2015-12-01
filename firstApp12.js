@@ -7,7 +7,7 @@ var teurl = "http://localhost:8000/te";
 var kurl = "http://localhost:8000/k";
                                                                                                        
 angular.module('firstApp', [])
-.constant('_', $window._)
+.constant('_', window._)
                                                                                                        
 .controller('mainController', [ '$scope', '$http', function($scope, $http) {                           
     // bind this to vm (view-model)                                                                    
