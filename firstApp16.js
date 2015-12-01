@@ -65,6 +65,7 @@ $scope.k = function(){
   
   $scope.filterAll = function(){
            var temp = JSON.parse(JSON.stringify($scope.response));
+           temp = temp.slice(10);
            console.log(temp);
            temp = _.sortBy(temp, function(o) { return (-1)*o.stat6; })
            console.log(temp);
