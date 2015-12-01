@@ -11,7 +11,10 @@ angular.module('firstApp', [])
                                                                                                        
   $scope.players = function(){                                                                         
        console.log("here");                                                                            
-       $http.get(url).success(function(response){ return response.items });                            
+       $http.get(url).success(function(response){ 
+         console.log(response);
+         return response;  
+       });                            
    }                                                                                                   
                                                                                                        
 }]);            
