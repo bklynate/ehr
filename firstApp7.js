@@ -5,7 +5,7 @@ var wrurl = "http://localhost:8000/wr";
 var rburl = "http://localhost:8000/rb";
 var teurl = "http://localhost:8000/te";
 var kurl = "http://localhost:8000/k";
-                                                                                                       
+var here = "here"                                                                                                       
 angular.module('firstApp', [])                                                                         
                                                                                                        
 .controller('mainController', [ '$scope', '$http', function($scope, $http) {                           
